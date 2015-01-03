@@ -14,6 +14,7 @@ def loadPageAndExtractText(name, pattern):
 	return result[0]
 
 def openNextPage(name):
+	print "The next level is '%s'" % (name, )
 	webbrowser.open(createURL(name))
 	src_url = "http://www.pythonchallenge.com/pcc/def/%s.html" % (name, )
 	webbrowser.open(src_url)
