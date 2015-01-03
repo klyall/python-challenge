@@ -3,12 +3,12 @@ import urllib2, re
 from StringIO import StringIO
 from zipfile import ZipFile
 
-zip_file = urllib2.urlopen('http://www.pythonchallenge.com/pc/def/channel.zip')
+url = urllib2.urlopen('http://www.pythonchallenge.com/pc/def/channel.zip')
 
 name = 'readme'
 nextName = []
 
-with ZipFile(StringIO(zip_file.read()), 'r') as myzip:
+with ZipFile(StringIO(url.read()), 'r') as myzip:
 	pattern = re.compile(r'([\d]{2,})', re.DOTALL)
 
 	while True:
